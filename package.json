@@ -1,0 +1,22 @@
+{
+  "name": "fast-order",
+  "version": "0.0.1",
+  "description": "Fast Order Entry for Crypto Currencies",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neosavvyinc/fast-order.git"
+  },
+  "author": "Adam Parrish",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neosavvyinc/fast-order/issues"
+  },
+  "homepage": "https://github.com/neosavvyinc/fast-order#readme",
+  "devDependencies": {
+    "electron": "^2.0.0-beta.4"
+  }
+}
