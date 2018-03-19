@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Order Window</title>
+
+    <script src="./node_modules/mousetrap/mousetrap.min.js"></script>
+</head>
+<body>
+
+<script type="application/javascript">
+    var MouseTrap = require('mousetrap');
+
+    Mousetrap.bind(['command+s', 'ctrl+s'], function() {
+        window.alert("Toggle Sell Order Ticket");
+    });
+
+    Mousetrap.bind(['command+b', 'ctrl+b'], function() {
+        window.alert("Toggle Buy Order Ticket");
+    });
+
+    Mousetrap.bind(['command+e', 'ctrl+e'], function() {
+        window.alert("Modify the Exchange");
+    });
+
+    Mousetrap.bind(['command+p', 'ctrl+p'], function() {
+        window.alert("Focus on Currency Pair");
+    });
+
+    Mousetrap.bind(['j'], function() {
+        window.alert("decrease quantity by 1%");
+    });
+
+    Mousetrap.bind(['k'], function() {
+        window.alert("increase quantity by 1%");
+    });
+
+    Mousetrap.bind(['l'], function() {
+        window.alert("decrease quantity by 10%");
+    });
+
+    Mousetrap.bind([';'], function() {
+        window.alert("increase quantity by 10%");
+    });
+
+    Mousetrap.bind(['command+t', 'ctrl+t'], function() {
+        window.alert("Iterate through Market, Limit, Stop Loss");
+    });
+
+    Mousetrap.bind(['command+x', 'ctrl+x'], function() {
+        window.alert("Executing Order");
+    });
+
+
+</script>
+
+<div class="container">
+    <div>&nbsp;</div>
+    <div class="alert alert-dark" role="alert">
+        <div class="row justify-content-center">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">GDAX</button>
+                <button type="button" class="btn btn-secondary">BITTREX</button>
+                <button type="button" class="btn btn-secondary">BINANCE</button>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-danger">SELL</button>
+                <button type="button" class="btn btn-success">BUY</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-success" role="alert">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Currency Pair</span>
+            </div>
+            <input
+                type="text"
+                class="form-control"
+                placeholder="BTC-USD"
+                aria-label="BTC-USD"
+                aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary">MARKET</button>
+                <button type="button" class="btn btn-secondary">LIMIT</button>
+                <button type="button" class="btn btn-secondary">STOP-LOSS</button>
+            </div>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Amount</span>
+            </div>
+            <input
+                    type="text"
+                    class="form-control"
+                    placeholder="7000.00"
+                    aria-label="Amount"
+                    aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-3">
+            <button type="button" class="btn btn-secondary">SEND ORDER</button>
+        </div>
+    </div>
+
+
+    <div class="alert alert-danger" role="alert">
+        Sell Order
+    </div>
+</div>
+</body>
+</html>
