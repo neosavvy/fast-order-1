@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import cn from 'classnames';
-//import AuthUtils from 'gdax-trade-client/src/util/authentication.util'
 import Gdax from 'gdax';
 import _ from 'lodash';
-
+import CONFIG from './Config';
 import './App.css';
+
+const CRED = CONFIG.CRED;
 
 
 const BUY = 'BUY';
@@ -18,11 +19,6 @@ const ORDER_TYPE_MARKET = "MARKET";
 const ORDER_TYPE_LIMIT = "LIMIT";
 const ORDER_TYPE_STOP_LOSS = "STOP_LOSS";
 
-const CRED = {
-    "key": "b7ed535d1496aad6bcfc1adcebef2372",
-    "secret": "d/I4TKRc7u0oJd+psjf5u024t1LhpkP6O2IQrGP4sb62R6D0jiIHTxhVJrYVdck8SjXYys/U7wgsLJ24JgNR3w==",
-    "passphrase": "entente-baronage-camomile"
-};
 const apiURI = 'https://api.gdax.com';
 const sandboxURI = 'https://api-public.sandbox.gdax.com';
 

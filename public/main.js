@@ -35,10 +35,10 @@ function initializeMainWindow() {
         isDev ? "http://localhost:3000" : `file://${path.join(__dirname, '../build/index.html')}`
     );
 
-    app.setAboutPanelOptions({
-        applicationName: "Fast Order",
-        applicationVersion: "0.0.1",
-    });
+    // app.setAboutPanelOptions({
+    //     applicationName: "Fast Order",
+    //     applicationVersion: "0.0.1",
+    // });
     win.on("closed", () => win = null);
 
     // _view.webContents.openDevTools();
