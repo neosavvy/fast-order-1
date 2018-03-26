@@ -16,6 +16,8 @@ let _win, _view, _controls, _orderWindows = [];
 function initializeMainWindow() {
     let win = new BrowserWindow({
         closable: false,
+        x: 0,
+        y: 82,
         width: 1024,
         height: 768});
     _view = new BrowserView({
@@ -71,7 +73,7 @@ function newOrderWindow(x, y) {
         y: y,
         closable: true,
         width: 400,
-        height: 420,
+        height: 500,
         webPreferences: {webSecurity: false}
     });
     orderWindow.loadURL(
